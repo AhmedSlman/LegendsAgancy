@@ -22,21 +22,21 @@ abstract class AppConstants {
     ),
   ];
   static const List<CustomService> imageservices = [
+    CustomService(
+      service: ' BELAL',
+      logo: AppAssets.firstcardlogo,
+      description: '(CEO) & Founder',
+    ),
     // CustomService(
-    //   service: ' BELAL',
-    //   logo: AppAssets.firstcardlogo,
-    //   description: '(CEO) & Founder',
+    //   service: 'Elashry',
+    //   logo: AppAssets.secondcardlogo,
+    //   description: 'Lorem ipsum dolor sit amet',
     // ),
-    // // CustomService(
-    // //   service: 'Elashry',
-    // //   logo: AppAssets.secondcardlogo,
-    // //   description: 'Lorem ipsum dolor sit amet',
-    // // ),
-    // CustomService(
-    //   service: 'Ahmed',
-    //   logo: AppAssets.thirdcardlogo,
-    //   description: 'Creative Director',
-    // ),
+    CustomService(
+      service: 'Ahmed',
+      logo: AppAssets.thirdcardlogo,
+      description: 'Creative Director',
+    ),
   ];
   static const List<Project> projects = [
     // Project(
