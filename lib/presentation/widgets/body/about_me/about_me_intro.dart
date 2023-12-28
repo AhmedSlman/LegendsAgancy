@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/generated/l10n.dart';
 
 import '../../../../core/utils/app_enums.dart';
 import '../../../../core/utils/app_extensions.dart';
-import '../../../../core/utils/app_strings.dart';
 import '../../../../core/utils/app_styles.dart';
 
 class AboutMeIntro extends StatelessWidget {
@@ -21,7 +21,7 @@ class AboutMeIntro extends StatelessWidget {
         ),
         const SizedBox(height: 8),
         Text(
-          AppStrings.aboutMeMsg,
+          S.of(context).aboutMeMsg,
           style: context.width < DeviceType.mobile.getMaxWidth()
               ? AppStyles.s14
               : AppStyles.s18,

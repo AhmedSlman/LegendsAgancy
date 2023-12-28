@@ -1,9 +1,13 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, must_be_immutable
+// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, must_be_immutable, deprecated_member_use
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/core/utils/app_styles.dart';
+import 'package:portfolio/presentation/widgets/app_bar/developer_name_btn.dart';
 import 'package:universal_html/html.dart' as html;
+import 'package:universal_html/js.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/social_links.dart';
@@ -18,28 +22,42 @@ class SocialMediaIcons extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            'Contact Us',
-            style: AppStyles.s28,
+            isArabic() ? " تواصل معنا :" : 'Contact Us ',
+            style: AppStyles.s28.copyWith(color: Colors.white),
           ),
           SizedBox(
             height: 20,
           ),
-          SocialMediaIconBtn(
-            icon: FontAwesomeIcons.whatsapp,
-            link: SocialLinks.whatsapp,
-            email: '+20 1099127350',
-          ),
+          // SocialMediaIconBtn(
+          //   icon: FontAwesomeIcons.whatsapp,
+          //   link: SocialLinks.whatsapp,
+          //   //email: '+20 1099127350',
+          // ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 20),
-            child: SocialMediaIconBtn(
-              icon: FontAwesomeIcons.envelope,
-              // link: SocialLinks.launchEmail(),
-              email: 'legendsagency7@gmail.com',
+            child: TextButton(
+              onPressed: () {
+                _launchGmail('legendsagency7@gmail.com');
+              },
+              child: Text(
+                'legendsagency7@gmail.com',
+                style: AppStyles.s18.copyWith(color: AppColors.primaryColor, fontSize: 22),
+              ),
+              // child: Icon(
+              //   Icons.mail,
+              //   color: AppColors.primaryColor,
+              //   size: 32,
+              // ),
             ),
+            // child: SocialMediaIconBtn(
+            //   icon: FontAwesomeIcons.envelope,
+            //   // link: SocialLinks.launchEmail(),
+            //   email: 'legendsagency7@gmail.com',
+            // ),
           ),
           SizedBox(height: 5),
           Text(
-            'OR',
+            isArabic() ? "او من خلال" : 'OR',
             style: AppStyles.s24,
           ),
           SizedBox(
@@ -93,6 +111,9 @@ class SocialMediaIconBtn extends StatelessWidget {
         shape: const CircleBorder(),
         //padding: const EdgeInsets.all(6),
       ),
+      onLongPress: () {
+        _copyToClipboard('legendsagency7@gmail.com');
+      },
       onPressed: () {
         html.window.open(link!, '_blank');
       },
@@ -115,4 +136,22 @@ class SocialMediaIconBtn extends StatelessWidget {
       ),
     );
   }
+}
+
+_launchGmail(String email) async {
+  final Uri _emailLaunchUri = Uri(
+    scheme: 'mailto',
+    path: email,
+  );
+
+  final String emailLaunchUri = _emailLaunchUri.toString();
+  if (await canLaunch(emailLaunchUri)) {
+    await launch(emailLaunchUri);
+  } else {
+    throw 'Could not launch $emailLaunchUri';
+  }
+}
+
+_copyToClipboard(String text) {
+  Clipboard.setData(ClipboardData(text: text));
 }

@@ -1,6 +1,7 @@
 // ignore_for_file: unused_import
 
 import 'package:flutter/material.dart';
+import 'package:portfolio/generated/l10n.dart';
 import 'package:portfolio/presentation/widgets/body/about_me/our_agents_item.dart';
 
 import '../../../../core/utils/app_strings.dart';
@@ -17,7 +18,7 @@ class DetailedServicesSection extends StatelessWidget {
       children: [
         FittedBox(
           child: Text(
-            AppStrings.servicesIOffer,
+            S.of(context).servicesIOffer,
             style: AppStyles.s32,
           ),
         ),

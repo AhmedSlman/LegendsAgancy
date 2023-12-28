@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/generated/l10n.dart';
 
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_enums.dart';
@@ -18,7 +19,7 @@ class IntroText extends StatelessWidget {
           : CrossAxisAlignment.start,
       children: [
         Text(
-          AppStrings.helloIM,
+          S.of(context).helloIM,
           style: context.width < DeviceType.ipad.getMaxWidth()
               ? AppStyles.s16
               : AppStyles.s32.copyWith(color: AppColors.white),
@@ -27,7 +28,7 @@ class IntroText extends StatelessWidget {
         ),
         const SizedBox(height: 6),
         Text(
-          AppStrings.developerName,
+          S.of(context).developerName,
           style: context.width < DeviceType.ipad.getMaxWidth()
               ? AppStyles.s24
               : AppStyles.s52,
@@ -40,7 +41,7 @@ class IntroText extends StatelessWidget {
               ? context.width - 20
               : context.width / 2.5,
           child: Text(
-            AppStrings.introMsg,
+            S.of(context).introMsg,
             style: context.width < DeviceType.ipad.getMaxWidth()
                 ? AppStyles.s14
                 : AppStyles.s18,

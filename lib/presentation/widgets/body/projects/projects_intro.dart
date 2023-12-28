@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/generated/l10n.dart';
 
 import '../../../../core/utils/app_strings.dart';
 import '../../../../core/utils/app_styles.dart';
@@ -13,13 +14,13 @@ class ProjectsIntro extends StatelessWidget {
       children: [
         FittedBox(
           child: Text(
-            AppStrings.featuredProjects,
+            S.of(context).featuredProjects,
             style: AppStyles.s32,
           ),
         ),
         const SizedBox(height: 8),
         Text(
-          AppStrings.projectsMsg,
+          S.of(context).projectsMsg,
           style: AppStyles.s18,
           softWrap: true,
         ),

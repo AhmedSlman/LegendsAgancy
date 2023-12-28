@@ -1,10 +1,16 @@
+import 'dart:js';
+
+import 'package:flutter/src/widgets/framework.dart';
+import 'package:portfolio/generated/l10n.dart';
+import 'package:portfolio/presentation/widgets/app_bar/developer_name_btn.dart';
+
 import '../../data/models/custom_service.dart';
 import '../../data/models/project.dart';
 import 'app_assets.dart';
 
 abstract class AppConstants {
   static const double appBarHeight = 80;
-  static const List<CustomService> services = [
+  static List<CustomService> services = [
     CustomService(
       service: 'Graphic Designing',
       logo: AppAssets.androidLogo,
@@ -21,91 +27,47 @@ abstract class AppConstants {
       description: '............',
     ),
   ];
-  static const List<CustomService> imageservices = [
-    CustomService(
-      service: ' BELAL',
-      logo: AppAssets.firstcardlogo,
-      description: '(CEO) & Founder',
-    ),
+  static List<CustomService> imageservices = [
+    CustomService(logo: AppAssets.ccover)
     // CustomService(
-    //   service: 'Elashry',
-    //   logo: AppAssets.secondcardlogo,
-    //   description: 'Lorem ipsum dolor sit amet',
+    //   service: ' BELAL',
+    //   logo: AppAssets.firstcardlogo,
+    //   description: '(CEO) & Founder',
+    // CustomService(
+    //   service: 'Ahmed',
+    //   logo: AppAssets.thirdcardlogo,
+    //   description: 'Creative Director',
     // ),
-    CustomService(
-      service: 'Ahmed',
-      logo: AppAssets.thirdcardlogo,
-      description: 'Creative Director',
-    ),
   ];
-  static const List<Project> projects = [
-    // Project(
-    // name: 'messi',
-    //imageUrl: 'assets/images/test4.jpg',
-    //description:
-    //  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    //previewLink:
-    //  'https://www.behance.net/gallery/165757069/Social-Media-Art-Work-Daily-Updated-Vol2',
-    //),
+  static List<Project> projects = [
     Project(
-      name: 'SOCIAL MEDIA - ART WORK',
+      name: isArabic()
+          ? "وسائل التواصل الاجتماعي - العمل الفني"
+          : "SOCIAL MEDIA - ART WORK",
       imageUrl: 'https://i.postimg.cc/ZYXkKDrq/general.jpg',
-      description:
-          "Discover a visual masterpiece on our social media, where art and creativity collide to celebrate our passion for all things football.",
+      description: isArabic()
+          ? "اكتشف تحفة بصرية على وسائل التواصل الاجتماعي الخاصة بنا، حيث يتلاقى الفن والإبداع للاحتفال بشغفنا بكل ما يتعلق بكرة القدم."
+          : " and creativity collide to celebrate our passion for all things football.",
       previewLink:
           'https://www.behance.net/gallery/165757069/Social-Media-Art-Work-Daily-Updated-Vol2',
     ),
     Project(
-      name: 'Elmarkhya',
+      name: isArabic() ? 'نادي المرخيةالقطري' : "Al Markhiya",
       imageUrl: 'https://i.postimg.cc/bJHDgF1H/FB-IMG-1692460798020.jpg',
-      description:
-          "Vibrant social media design for Al-Markhiya Qatari Club, uniting fans with dynamic visuals of team accomplishments, matches, and community engagement.",
+      description: isArabic()
+          ? "تصميم حيوي على وسائل التواصل الاجتماعي لنادي المرخية القطري، يوحد الجماهير بصور ديناميكية لإنجازات الفريق، والمباريات، والمشاركة في المجتمع"
+          : "Vibrant social media design for Al-Markhiya Qatari Club, uniting fans with dynamic visuals of team accomplishments, matches, and community engagement.",
       previewLink:
           'https://www.behance.net/gallery/175914671/AlMarkhiyaSC-Official-Identity',
     ),
     Project(
-      name: 'PSG',
+      name: isArabic() ? "باريس سان جيرمان " : 'PARIS SANT GERMAIN(PSG)',
       imageUrl: 'https://i.postimg.cc/1X1DtQMS/PSG.jpg',
-      description:
-          "Dive into the heart of PSG's passion and excitement through our captivating and interactive social media design.",
+      description: isArabic()
+          ? "انغمس في قلب شغف باريس سان جيرمان من خلال تصميمات وسائل التواصل الاجتماعي الرائعة والتفاعلية لدينا."
+          : "Dive into the heart of PSG's passion and excitement through our captivating and interactive social media design.",
       previewLink:
           'https://www.behance.net/gallery/152964583/PSG-FC-Unofficial-Identity',
     ),
-    // Project(
-    //   name: '',
-    //   imageUrl:
-    //       'https://drive.google.com/uc?id=1hd7U3HgoDqXEi9eDKYjrY9iqlWa6qt8E',
-    //   description:
-    //       '',
-    //   githubRepoLink:
-    //       'https://github.com/radyhaggag/image_processing_program_with_python_flet',
-    //   previewLink: 'https://youtu.be/o070OGt68VA',
-    // ),
-    // Project(
-    //   name: '',
-    //   imageUrl:
-    //       'https://drive.google.com/uc?id=1UpCGckOS46GdTuHU4wuj7Abo_97gxe_E',
-    //   description:
-    //       '',
-    //   googlePlay:
-    //       'https://play.google.com/store/apps/details?id=com.SJY.salataljanaza',
-    // ),
-    // Project(
-    //   name: '',
-    //   imageUrl:
-    //       'https://drive.google.com/uc?id=1ed4H2-cH6yk_kVkDdxOLcUkgP1xpuo72',
-    //   description:
-    //       '',
-    // ),
-    // Project(
-    //   name: '',
-    //   imageUrl:
-    //       'https://drive.google.com/uc?id=1ElTwguynMLqhS295-IE7bTTabsZGZp8s',
-    //   description:
-    //       '',
-    //   previewLink: 'https://youtu.be/sICSM4D-rPM',
-    //   googlePlay:
-    //       'https://play.google.com/store/apps/details?id=com.radyhaggag.zawilan',
-    // ),
   ];
 }

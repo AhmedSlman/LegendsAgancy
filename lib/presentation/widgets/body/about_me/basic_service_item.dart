@@ -34,34 +34,34 @@ class _BasicServiceItemState extends State<BasicServiceItem> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              height: MediaQuery.of(context).size.height * 0.6,
+              height: MediaQuery.of(context).size.height * 0.4,
               child: Image.network(
                 widget.service.logo,
               ),
             ),
-            const SizedBox(height: 5),
-            if (context.width > DeviceType.mobile.getMinWidth())
-              FittedBox(
-                child: Text(
-                  widget.service.service,
-                  style: AppStyles.s28.copyWith(
-                      fontWeight: FontWeight.bold, color: Colors.white),
-                  // minFontSize: 8,
-                  textAlign: TextAlign.center,
-                ),
-              ),
-            const SizedBox(height: 5),
-            if (context.width > DeviceType.mobile.getMinWidth())
-              FittedBox(
-                child: Text(
-                  widget.service.description,
-                  style: AppStyles.s24.copyWith(
-                      fontWeight: FontWeight.w500,
-                      color: Color.fromARGB(255, 255, 72, 17)),
-                  // minFontSize: 8,
-                  textAlign: TextAlign.center,
-                ),
-              ),
+            //const SizedBox(height: 5),
+            // if (context.width > DeviceType.mobile.getMinWidth())
+            //   FittedBox(
+            //     child: Text(
+            //       widget.service.service,
+            //       style: AppStyles.s28.copyWith(
+            //           fontWeight: FontWeight.bold, color: Colors.white),
+            //       // minFontSize: 8,
+            //       textAlign: TextAlign.center,
+            //     ),
+            //   ),
+            // const SizedBox(height: 5),
+            // if (context.width > DeviceType.mobile.getMinWidth())
+            //   FittedBox(
+            //     child: Text(
+            //       widget.service.description,
+            //       style: AppStyles.s24.copyWith(
+            //           fontWeight: FontWeight.w500,
+            //           color: Color.fromARGB(255, 255, 72, 17)),
+            //       // minFontSize: 8,
+            //       textAlign: TextAlign.center,
+            //     ),
+            //   ),
           ],
         ),
       ),

@@ -16,6 +16,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   }
   int _appBarHeaderIndex = 0;
   int get appBarHeaderIndex => _appBarHeaderIndex;
+  //  String currentLanguage = 'en';
 
   FutureOr<void> _changeAppBarHeadersIndex(
     ChangeAppBarHeadersIndex event,
@@ -44,3 +45,20 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     emit(AppBarHeadersAxisChanged(_appBarHeaderAxis));
   }
 }
+
+// class LanguageBloc extends Bloc<HomeEvent, HomeState> {
+//   String currentLanguage = 'en';
+
+//   LanguageBloc(super.initialState);
+
+//   @override
+//   HomeState get initialState => LanguageChangedState(currentLanguage);
+
+//   @override
+//   Stream<HomeState> mapEventToState(HomeEvent event) async* {
+//     if (event is ToggleLanguageEvent) {
+//       currentLanguage = currentLanguage == 'en' ? 'ar' : 'en';
+//       yield LanguageChangedState(currentLanguage);
+//     }
+//   }
+// }

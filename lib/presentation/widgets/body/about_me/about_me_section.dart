@@ -1,6 +1,7 @@
 // ignore_for_file: unused_import
 
 import 'package:flutter/material.dart';
+import 'package:portfolio/core/utils/app_assets.dart';
 import 'package:portfolio/presentation/widgets/body/about_me/our_agents_item.dart';
 
 import '../../../../core/utils/app_colors.dart';
@@ -32,9 +33,13 @@ class AboutMeSection extends StatelessWidget {
           ),
           const SizedBox(height: 8),
           const ExperienceInfo(),
-          const SizedBox(height: 58),
-          const BasicServicesGrid(),
-          const SizedBox(height: 80),
+          const SizedBox(height: 50),
+          Center(
+              child: Image.network(
+            AppAssets.ccover,
+            height: context.height / 1.3,
+          )),
+          const SizedBox(height: 50),
           // OurAgentsItem(),
           const DetailedServicesSection(),
         ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/presentation/widgets/app_bar/developer_name_btn.dart';
 
 import 'app_enums.dart';
 
@@ -6,13 +7,13 @@ extension AppBarHeaderExtension on AppBarHeaders {
   String getString() {
     switch (this) {
       case AppBarHeaders.home:
-        return 'Home';
+        return isArabic() ? 'الرئيسيه' : "Home";
       case AppBarHeaders.aboutus:
-        return 'About Us';
+        return isArabic() ? "نبذه عنا" : "About Us";
       case AppBarHeaders.projects:
-        return 'Projects';
+        return isArabic() ? "المشاريع" : "Projects";
       case AppBarHeaders.contact:
-        return 'Contact';
+        return isArabic() ? "تواصل معنا" : "Contact";
     }
   }
 }

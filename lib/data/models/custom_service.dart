@@ -1,11 +1,11 @@
 class CustomService {
-  final String service;
+  String? service;
   final String logo;
-  final String description;
+  String? description;
 
-  const CustomService({
-    required this.service,
+  CustomService({
+    this.service,
     required this.logo,
-    required this.description,
+    this.description,
   });
 }

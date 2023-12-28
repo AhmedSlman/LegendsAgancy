@@ -33,3 +33,9 @@ class AppBarHeadersColorChangedByIndex extends HomeState {
   @override
   List<Object?> get props => [index];
 }
+
+// class LanguageChangedState extends HomeState {
+//   final String newLanguage;
+
+//   LanguageChangedState(this.newLanguage);
+// }

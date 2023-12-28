@@ -13,7 +13,7 @@
 //     return Padding(
 //       padding: const EdgeInsets.only(bottom: 80),
 //       child: context.width > DeviceType.ipad.getMaxWidth()
-//           ?  Row(
+//           ? Row(
 //               crossAxisAlignment: CrossAxisAlignment.start,
 //               children: const [
 //                 Expanded(
@@ -23,7 +23,7 @@
 //                 Expanded(child: ContactForm()),
 //               ],
 //             )
-//           :  Column(
+//           : Column(
 //               crossAxisAlignment: CrossAxisAlignment.center,
 //               children: const [
 //                 ContactIntro(),

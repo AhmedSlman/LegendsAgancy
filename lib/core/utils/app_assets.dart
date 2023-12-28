@@ -8,4 +8,5 @@ abstract class AppAssets {
   static const firstcardlogo = 'https://i.postimg.cc/3RfLqPxH/BelalO.png';
   static const secondcardlogo = '$_basePath/blal.jpg';
   static const thirdcardlogo = 'https://i.postimg.cc/G3qjpJc4/AhmedM.png';
+  static const ccover = 'https://i.postimg.cc/W4rKftzj/image.png';
 }

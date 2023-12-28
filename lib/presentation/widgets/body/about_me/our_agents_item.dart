@@ -7,6 +7,7 @@ import 'package:portfolio/core/utils/app_colors.dart';
 import 'package:portfolio/core/utils/app_constants.dart';
 import 'package:portfolio/core/utils/app_styles.dart';
 import 'package:portfolio/core/widgets/custom_button.dart';
+import 'package:portfolio/presentation/widgets/app_bar/developer_name_btn.dart';
 
 class OurAgentsItem extends StatelessWidget {
   CarouselController buttonCarouselController = CarouselController();
@@ -17,14 +18,14 @@ class OurAgentsItem extends StatelessWidget {
     return Column(
       children: [
         CarouselSlider(
-          items: const [
+          items: [
             AgentColumn(
-              AgentName: 'AL MARKHIYA CLUB',
+              AgentName: isArabic() ? "نادي المرخيه" : 'AL MARKHIYA CLUB',
               AgnetImagePath: 'https://i.postimg.cc/PrqHP876/elmarkya.png',
             ),
             AgentColumn(
-              AgentName: 'ALKHARAITIYAT SC',
-              AgnetImagePath: 'https://i.postimg.cc/VLtJdnMq/Al-Kharaitiyat-Logo.png',
+              AgentName: isArabic() ? "نادي أبها" : 'ABHA CLUB',
+              AgnetImagePath: 'https://pasteboard.co/qwxFqDAYAQ8e.png',
             ),
             // AgentColumn(
             //   AgentName: 'ABHA CLUB',
@@ -54,7 +55,7 @@ class OurAgentsItem extends StatelessWidget {
             CustomButton(
               height: 50,
               width: 100,
-              label: 'Next',
+              label: isArabic() ? "التالي" : "Next",
               backgroundColor: AppColors.primaryColor,
               onPressed: () => buttonCarouselController.nextPage(
                   duration: Duration(milliseconds: 300), curve: Curves.linear),

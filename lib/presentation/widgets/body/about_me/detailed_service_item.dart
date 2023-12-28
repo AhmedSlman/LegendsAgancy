@@ -47,23 +47,23 @@ class _DetailedServiceItemState extends State<DetailedServiceItem> {
               widget.service.logo,
             ),
             const SizedBox(height: 16),
-            FittedBox(
-              child: Text(
-                widget.service.service,
-                style: AppStyles.s24.copyWith(color: itemColor),
-                textAlign: TextAlign.center,
-              ),
-            ),
-            const SizedBox(height: 16),
-            if (context.width > DeviceType.mobile.getMinWidth())
-              FittedBox(
-                child: Text(
-                  widget.service.service,
-                  style: AppStyles.s14,
-                  // minFontSize: 8,
-                  textAlign: TextAlign.center,
-                ),
-              ),
+            // FittedBox(
+            //   child: Text(
+            //     widget.service.service,
+            //     style: AppStyles.s24.copyWith(color: itemColor),
+            //     textAlign: TextAlign.center,
+            //   ),
+            // ),
+            // const SizedBox(height: 16),
+            // if (context.width > DeviceType.mobile.getMinWidth())
+            //   FittedBox(
+            //     child: Text(
+            //       widget.service.service,
+            //       style: AppStyles.s14,
+            //       // minFontSize: 8,
+            //       textAlign: TextAlign.center,
+            //     ),
+            //   ),
             // if (context.width > DeviceType.mobile.getMinWidth()) ...[
             //   const SizedBox(height: 10),
             //   Flexible(

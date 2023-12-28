@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/presentation/widgets/app_bar/developer_name_btn.dart';
 import 'package:universal_html/html.dart' as html;
 
 import '../../../../core/utils/app_colors.dart';
@@ -20,7 +21,7 @@ class ProjectActions extends StatelessWidget {
           if (project.previewLink != null)
             Expanded(
               child: CustomButton(
-                label: 'Preview',
+                label: isArabic() ? "عرض" : "Preview",
                 backgroundColor: AppColors.primaryColor,
                 onPressed: () {
                   html.window.open(project.previewLink!, '_blank');

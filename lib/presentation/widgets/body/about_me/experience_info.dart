@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/generated/l10n.dart';
 
 import '../../../../core/utils/app_enums.dart';
 import '../../../../core/utils/app_extensions.dart';
@@ -15,7 +16,7 @@ class ExperienceInfo extends StatelessWidget {
         Row(
           children: [
             Text(
-              AppStrings.numOfExperience,
+              S.of(context).numOfExperience,
               style: context.width < DeviceType.mobile.getMaxWidth()
                   ? AppStyles.s32.copyWith(fontSize: 22)
                   : AppStyles.s32.copyWith(fontSize: 35),
@@ -31,7 +32,7 @@ class ExperienceInfo extends StatelessWidget {
           ],
         ),
         Text(
-          'Our agency aspires to be the most distinguished and radiant among all. We strive relentlessly to be capable of partnering with the finest clubs from the largest championships in the world',
+          S.of(context).ourVision,
           style: TextStyle(
               color: Colors.white, fontSize: 18, fontWeight: FontWeight.w400),
         ),

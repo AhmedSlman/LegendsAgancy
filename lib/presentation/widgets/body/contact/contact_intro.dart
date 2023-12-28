@@ -14,13 +14,13 @@
 //       children: [
 //         FittedBox(
 //           child: Text(
-//             AppStrings.contactWithMe,
+//             "",
 //             style: AppStyles.s32,
 //           ),
 //         ),
 //         const SizedBox(height: 8),
 //         Text(
-//           AppStrings.contactMsg,
+//           "",
 //           style: AppStyles.s18,
 //           softWrap: true,
 //         ),
