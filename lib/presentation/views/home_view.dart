@@ -17,15 +17,18 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       appBar: HomeAppBar(),
       body: HomeBody(),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(
-          FontAwesomeIcons.whatsapp,
-          size: 30,
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.only(bottom: 35),
+        child: FloatingActionButton(
+          child: Icon(
+            FontAwesomeIcons.whatsapp,
+            size: 30,
+          ),
+          backgroundColor: AppColors.primaryColor,
+          onPressed: () {
+            html.window.open(SocialLinks.whatsapp, '_blank');
+          },
         ),
-        backgroundColor: AppColors.primaryColor,
-        onPressed: () {
-          html.window.open(SocialLinks.whatsapp, '_blank');
-        },
       ),
     );
   }

@@ -5,13 +5,15 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_phoenix/flutter_phoenix.dart';
 import 'package:portfolio/generated/l10n.dart';
 import 'package:universal_html/html.dart' as html;
+import 'dart:html' as html;
 
 import '../../../core/utils/app_enums.dart';
 import '../../../core/utils/app_extensions.dart';
 import '../../../core/utils/app_styles.dart';
 import 'package:intl/intl.dart';
 
-import '../../../cubit/locale_cubit.dart';
+import '../../../local_cubit/locale_cubit.dart';
+import '../../views/home_view.dart';
 
 class DeveloperNameBtn extends StatelessWidget {
   const DeveloperNameBtn({super.key});
@@ -65,7 +67,8 @@ class DeveloperNameBtn extends StatelessWidget {
                         onChanged: (String? newValue) {
                           if (newValue != null) {
                             BlocProvider.of<LocaleCubit>(context).changeLanguage(newValue);
-                            Phoenix.rebirth(context);
+                            // Phoenix.rebirth(context);
+                            html.window.location.reload();
                           }
                         },
                       );

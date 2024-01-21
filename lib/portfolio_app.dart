@@ -3,11 +3,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart'; // Import the correct package
-import 'package:portfolio/cubit/locale_cubit.dart';
 import 'package:shimmer/shimmer.dart';
 
 import 'config/theme_manager.dart';
 import 'generated/l10n.dart';
+import 'local_cubit/locale_cubit.dart';
 import 'presentation/blocs/home_bloc/home_bloc.dart';
 import 'presentation/views/home_view.dart';
 
