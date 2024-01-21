@@ -4,7 +4,6 @@ import 'package:portfolio/generated/l10n.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_enums.dart';
 import '../../../../core/utils/app_extensions.dart';
-import '../../../../core/utils/app_strings.dart';
 import '../../../../core/utils/app_styles.dart';
 import 'intro_actions.dart';
 
@@ -29,9 +28,7 @@ class IntroText extends StatelessWidget {
         const SizedBox(height: 6),
         Text(
           S.of(context).developerName,
-          style: context.width < DeviceType.ipad.getMaxWidth()
-              ? AppStyles.s24
-              : AppStyles.s52,
+          style: context.width < DeviceType.ipad.getMaxWidth() ? AppStyles.s24 : AppStyles.s52,
           textAlign: _getTextAlign(context.width),
           softWrap: true,
         ),
@@ -42,9 +39,7 @@ class IntroText extends StatelessWidget {
               : context.width / 2.5,
           child: Text(
             S.of(context).introMsg,
-            style: context.width < DeviceType.ipad.getMaxWidth()
-                ? AppStyles.s14
-                : AppStyles.s18,
+            style: context.width < DeviceType.ipad.getMaxWidth() ? AppStyles.s14 : AppStyles.s18,
             textAlign: _getTextAlign(context.width),
             softWrap: true,
           ),
@@ -56,8 +51,6 @@ class IntroText extends StatelessWidget {
   }
 
   _getTextAlign(double screenWidth) {
-    return screenWidth < DeviceType.mobile.getMaxWidth()
-        ? TextAlign.center
-        : TextAlign.start;
+    return screenWidth < DeviceType.mobile.getMaxWidth() ? TextAlign.center : TextAlign.start;
   }
 }

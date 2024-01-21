@@ -20,12 +20,12 @@ class OurAgentsItem extends StatelessWidget {
         CarouselSlider(
           items: [
             AgentColumn(
-              AgentName: isArabic() ? "نادي المرخيه" : 'AL MARKHIYA CLUB',
-              AgnetImagePath: 'https://i.postimg.cc/PrqHP876/elmarkya.png',
+              AgentName: isArabic() ? "نادي المرخية" : 'AL MARKHIYA CLUB',
+              AgnetImagePath: 'https://i.postimg.cc/FF2g9KhX/svg.png',
             ),
             AgentColumn(
               AgentName: isArabic() ? "نادي أبها" : 'ABHA CLUB',
-              AgnetImagePath: 'https://pasteboard.co/qwxFqDAYAQ8e.png',
+              AgnetImagePath: 'https://i.postimg.cc/fbr1CvNv/image.png',
             ),
             // AgentColumn(
             //   AgentName: 'ABHA CLUB',

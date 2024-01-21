@@ -1,9 +1,10 @@
+// ignore_for_file: unused_element
+
 import 'package:flutter/material.dart';
 import 'package:portfolio/generated/l10n.dart';
 
 import '../../../../core/utils/app_enums.dart';
 import '../../../../core/utils/app_extensions.dart';
-import '../../../../core/utils/app_strings.dart';
 import '../../../../core/utils/app_styles.dart';
 
 class ExperienceInfo extends StatelessWidget {
@@ -33,8 +34,7 @@ class ExperienceInfo extends StatelessWidget {
         ),
         Text(
           S.of(context).ourVision,
-          style: TextStyle(
-              color: Colors.white, fontSize: 18, fontWeight: FontWeight.w400),
+          style: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w400),
         ),
       ],
     );

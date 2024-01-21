@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, must_be_immutable, deprecated_member_use
+// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, must_be_immutable, deprecated_member_use, no_leading_underscores_for_local_identifiers
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -6,7 +6,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/core/utils/app_styles.dart';
 import 'package:portfolio/presentation/widgets/app_bar/developer_name_btn.dart';
 import 'package:universal_html/html.dart' as html;
-import 'package:universal_html/js.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../core/utils/app_colors.dart';
@@ -37,11 +36,11 @@ class SocialMediaIcons extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 20),
             child: TextButton(
               onPressed: () {
-                _launchGmail('legendsagency7@gmail.com');
+                _launchGmail('info@legendsagancy.com');
               },
               child: Text(
-                'legendsagency7@gmail.com',
-                style: AppStyles.s18.copyWith(color: AppColors.primaryColor, fontSize: 22),
+                'info@legendsagancy.com',
+                style: AppStyles.s18.copyWith(color: AppColors.primaryColor, fontSize: 18),
               ),
               // child: Icon(
               //   Icons.mail,

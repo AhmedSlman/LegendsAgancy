@@ -1,4 +1,3 @@
-import 'package:portfolio/generated/l10n.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class LangaugeCachedHelper {

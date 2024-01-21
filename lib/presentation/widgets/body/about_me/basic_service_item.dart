@@ -1,4 +1,4 @@
-// ignore_for_file: unused_import
+// ignore_for_file: unused_import, sized_box_for_whitespace, unused_element
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';

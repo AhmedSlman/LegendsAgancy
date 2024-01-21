@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/generated/l10n.dart';
 
-import '../../../../core/utils/app_strings.dart';
 import '../../../../core/utils/app_styles.dart';
 
 class ProjectsIntro extends StatelessWidget {

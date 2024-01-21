@@ -1,7 +1,3 @@
-import 'dart:js';
-
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:portfolio/generated/l10n.dart';
 import 'package:portfolio/presentation/widgets/app_bar/developer_name_btn.dart';
 
 import '../../data/models/custom_service.dart';
@@ -41,13 +37,11 @@ abstract class AppConstants {
   ];
   static List<Project> projects = [
     Project(
-      name: isArabic()
-          ? "وسائل التواصل الاجتماعي - العمل الفني"
-          : "SOCIAL MEDIA - ART WORK",
+      name: isArabic() ? "وسائل التواصل الاجتماعي - العمل الفني" : "SOCIAL MEDIA - ART WORK",
       imageUrl: 'https://i.postimg.cc/ZYXkKDrq/general.jpg',
       description: isArabic()
           ? "اكتشف تحفة بصرية على وسائل التواصل الاجتماعي الخاصة بنا، حيث يتلاقى الفن والإبداع للاحتفال بشغفنا بكل ما يتعلق بكرة القدم."
-          : " and creativity collide to celebrate our passion for all things football.",
+          : "Discover a visual masterpiece on our social media platforms, where art and creativity converge to celebrate our passion for everything related to football.",
       previewLink:
           'https://www.behance.net/gallery/165757069/Social-Media-Art-Work-Daily-Updated-Vol2',
     ),
@@ -57,8 +51,7 @@ abstract class AppConstants {
       description: isArabic()
           ? "تصميم حيوي على وسائل التواصل الاجتماعي لنادي المرخية القطري، يوحد الجماهير بصور ديناميكية لإنجازات الفريق، والمباريات، والمشاركة في المجتمع"
           : "Vibrant social media design for Al-Markhiya Qatari Club, uniting fans with dynamic visuals of team accomplishments, matches, and community engagement.",
-      previewLink:
-          'https://www.behance.net/gallery/175914671/AlMarkhiyaSC-Official-Identity',
+      previewLink: 'https://www.behance.net/gallery/175914671/AlMarkhiyaSC-Official-Identity',
     ),
     Project(
       name: isArabic() ? "باريس سان جيرمان " : 'PARIS SANT GERMAIN(PSG)',
@@ -66,8 +59,7 @@ abstract class AppConstants {
       description: isArabic()
           ? "انغمس في قلب شغف باريس سان جيرمان من خلال تصميمات وسائل التواصل الاجتماعي الرائعة والتفاعلية لدينا."
           : "Dive into the heart of PSG's passion and excitement through our captivating and interactive social media design.",
-      previewLink:
-          'https://www.behance.net/gallery/152964583/PSG-FC-Unofficial-Identity',
+      previewLink: 'https://www.behance.net/gallery/152964583/PSG-FC-Unofficial-Identity',
     ),
   ];
 }

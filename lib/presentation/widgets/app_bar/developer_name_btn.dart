@@ -1,15 +1,13 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, depend_on_referenced_packages
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_phoenix/flutter_phoenix.dart';
-import 'package:portfolio/core/utils/app_colors.dart';
 import 'package:portfolio/generated/l10n.dart';
 import 'package:universal_html/html.dart' as html;
 
 import '../../../core/utils/app_enums.dart';
 import '../../../core/utils/app_extensions.dart';
-import '../../../core/utils/app_strings.dart';
 import '../../../core/utils/app_styles.dart';
 import 'package:intl/intl.dart';
 
@@ -86,34 +84,4 @@ class DeveloperNameBtn extends StatelessWidget {
 
 bool isArabic() {
   return Intl.getCurrentLocale() == 'ar';
-}
-
-_showCustomDialog(BuildContext context) {
-  showDialog(
-    context: context,
-    builder: (BuildContext context) {
-      return AlertDialog(
-        title: Text('Dialog with Two Buttons'),
-        content: Text('Choose an action:'),
-        actions: <Widget>[
-          TextButton(
-            onPressed: () {
-              Navigator.of(context).pop(); // Close the dialog
-              // TODO: Add action for the first button
-              print('First Button Pressed');
-            },
-            child: Text('Button 1'),
-          ),
-          TextButton(
-            onPressed: () {
-              Navigator.of(context).pop(); // Close the dialog
-              // TODO: Add action for the second button
-              print('Second Button Pressed');
-            },
-            child: Text('Button 2'),
-          ),
-        ],
-      );
-    },
-  );
 }
