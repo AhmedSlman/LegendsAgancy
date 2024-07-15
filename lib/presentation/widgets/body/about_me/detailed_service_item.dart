@@ -1,8 +1,5 @@
-// ignore_for_file: unused_import
-
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_enums.dart';
@@ -45,35 +42,28 @@ class _DetailedServiceItemState extends State<DetailedServiceItem> {
           children: [
             Image.asset(
               widget.service.logo,
+              color: itemColor,
+              height: context.width < DeviceType.mobile.getMinWidth() ? 40 : 56,
             ),
             const SizedBox(height: 16),
-            // FittedBox(
-            //   child: Text(
-            //     widget.service.service,
-            //     style: AppStyles.s24.copyWith(color: itemColor),
-            //     textAlign: TextAlign.center,
-            //   ),
-            // ),
-            // const SizedBox(height: 16),
-            // if (context.width > DeviceType.mobile.getMinWidth())
-            //   FittedBox(
-            //     child: Text(
-            //       widget.service.service,
-            //       style: AppStyles.s14,
-            //       // minFontSize: 8,
-            //       textAlign: TextAlign.center,
-            //     ),
-            //   ),
-            // if (context.width > DeviceType.mobile.getMinWidth()) ...[
-            //   const SizedBox(height: 10),
-            //   Flexible(
-            //     child: AutoSizeText(
-            //       widget.service.description,
-            //       style: AppStyles.s17,
-            //       minFontSize: 8,
-            //       textAlign: TextAlign.center,
-            //     ),
-            //   ),
+            FittedBox(
+              child: Text(
+                widget.service.service ?? "",
+                style: AppStyles.s24.copyWith(color: itemColor),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            if (context.width > DeviceType.mobile.getMinWidth()) ...[
+              const SizedBox(height: 16),
+              Flexible(
+                child: AutoSizeText(
+                  widget.service.description ?? "",
+                  style: AppStyles.s17.copyWith(color: itemColor),
+                  minFontSize: 8,
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            ]
           ],
         ),
       ),

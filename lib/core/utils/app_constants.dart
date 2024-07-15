@@ -8,19 +8,29 @@ abstract class AppConstants {
   static const double appBarHeight = 80;
   static List<CustomService> services = [
     CustomService(
-      service: 'Graphic Designing',
-      logo: AppAssets.androidLogo,
-      description: '...........',
+      service: isArabic() ? "فيديو موشن" : 'Video Motion',
+      logo: AppAssets.motionGraphics,
+      description: '',
     ),
     CustomService(
-      service: 'Video Editing',
-      logo: AppAssets.uiDesignLogo,
-      description: '.............',
+      service: isArabic() ? "تصميم جرافيك" : 'Graphic Design',
+      logo: AppAssets.gallery,
+      description: '',
     ),
     CustomService(
-      service: 'Video Creating',
-      logo: AppAssets.scrappingLogo,
-      description: '............',
+      service: isArabic() ? "فيديو مونتاج" : 'Video Editing',
+      logo: AppAssets.videoEditor,
+      description: '',
+    ),
+    CustomService(
+      service: isArabic() ? "وسائل التواصل الاجتماعي" : 'Social Media',
+      logo: AppAssets.socialMedia,
+      description: '',
+    ),
+    CustomService(
+      service: isArabic() ? "تصميم فيديو" : 'Video Creating',
+      logo: AppAssets.videoCreating,
+      description: '',
     ),
   ];
   static List<CustomService> imageservices = [
@@ -60,6 +70,14 @@ abstract class AppConstants {
           ? "انغمس في قلب شغف باريس سان جيرمان من خلال تصميمات وسائل التواصل الاجتماعي الرائعة والتفاعلية لدينا."
           : "Dive into the heart of PSG's passion and excitement through our captivating and interactive social media design.",
       previewLink: 'https://www.behance.net/gallery/152964583/PSG-FC-Unofficial-Identity',
+    ),
+    Project(
+      name: isArabic() ? "نادي أبها " : 'ABHA CLUB',
+      imageUrl: 'https://i.postimg.cc/2ymw1YKc/BE-cover.png',
+      description: isArabic()
+          ? "انغمس في قلب شغف وإثارة نادي أبها من خلال تصميماتنا الرائعة والتفاعلية على وسائل التواصل الاجتماعي."
+          : "Dive into the heart of Abha Club's passion and excitement through our captivating and interactive social media design.",
+      previewLink: 'https://www.behance.net/gallery/188735461/Abha-FC-Official-Identity',
     ),
   ];
 }

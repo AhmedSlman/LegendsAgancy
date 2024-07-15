@@ -20,18 +20,14 @@ class SocialMediaIcons extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 30),
       child: Column(
         children: [
-          Text(
-            isArabic() ? " تواصل معنا :" : 'Contact Us ',
-            style: AppStyles.s28.copyWith(color: Colors.white),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          // SocialMediaIconBtn(
-          //   icon: FontAwesomeIcons.whatsapp,
-          //   link: SocialLinks.whatsapp,
-          //   //email: '+20 1099127350',
+          // Text(
+          //   isArabic() ? " تواصل معنا :" : 'Contact Us ',
+          //   style: AppStyles.s28.copyWith(color: Colors.white),
           // ),
+          // SizedBox(
+          //   height: 20,
+          // ),
+
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 20),
             child: TextButton(

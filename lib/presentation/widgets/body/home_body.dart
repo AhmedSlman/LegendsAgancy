@@ -48,8 +48,7 @@ class _HomeBodyState extends State<HomeBody> {
         context.read<HomeBloc>().add(ChangeAppBarHeadersColorByColor(0));
       } else if (controllerHeight < (introHeight + aboutHeight)) {
         context.read<HomeBloc>().add(ChangeAppBarHeadersColorByColor(1));
-      } else if (controllerHeight <
-          (introHeight + aboutHeight + projectHeight)) {
+      } else if (controllerHeight < (introHeight + aboutHeight + projectHeight)) {
         context.read<HomeBloc>().add(ChangeAppBarHeadersColorByColor(2));
       } else {
         context.read<HomeBloc>().add(ChangeAppBarHeadersColorByColor(3));
@@ -107,7 +106,7 @@ class _HomeBodyState extends State<HomeBody> {
                   IntroSection(key: introKey),
                   AboutMeSection(key: aboutKey),
                   ProjectsSection(key: projectKey),
-                  SocialMediaIcons(key: contactKey),
+                  ContactSection(key: contactKey),
                 ],
               ),
             ),

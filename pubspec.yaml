@@ -24,6 +24,8 @@ dependencies:
   flutter_screenutil: ^5.9.0
   flutter_svg: ^2.0.2
   font_awesome_flutter: ^10.4.0
+  http: ^1.2.1
+  intl: ^0.18.1
   localization: ^2.1.1
   shared_preferences: ^2.2.2
   shimmer: ^3.0.0
@@ -49,7 +51,7 @@ flutter:
   uses-material-design: true
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/lang/
+    - assets/images/
   fonts:
     - family: Poppins
       fonts:

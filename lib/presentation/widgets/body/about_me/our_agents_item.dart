@@ -7,6 +7,7 @@ import 'package:portfolio/core/utils/app_colors.dart';
 import 'package:portfolio/core/utils/app_constants.dart';
 import 'package:portfolio/core/utils/app_styles.dart';
 import 'package:portfolio/core/widgets/custom_button.dart';
+import 'package:portfolio/generated/l10n.dart';
 import 'package:portfolio/presentation/widgets/app_bar/developer_name_btn.dart';
 
 class OurAgentsItem extends StatelessWidget {
@@ -17,6 +18,13 @@ class OurAgentsItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        FittedBox(
+          child: Text(
+            S.of(context).servicesIOffer,
+            style: AppStyles.s32,
+          ),
+        ),
+        const SizedBox(height: 10),
         CarouselSlider(
           items: [
             AgentColumn(
@@ -27,10 +35,10 @@ class OurAgentsItem extends StatelessWidget {
               AgentName: isArabic() ? "نادي أبها" : 'ABHA CLUB',
               AgnetImagePath: 'https://i.postimg.cc/fbr1CvNv/image.png',
             ),
-            // AgentColumn(
-            //   AgentName: 'ABHA CLUB',
-            //   AgnetImagePath: 'assets/images/Abha1.png',
-            // ),
+            AgentColumn(
+              AgentName: isArabic() ? "نادي الوكرة" : 'AL WAKRAH SC',
+              AgnetImagePath: 'https://i.postimg.cc/mgT71gw5/svg.png',
+            ),
           ],
           carouselController: buttonCarouselController,
           options: CarouselOptions(

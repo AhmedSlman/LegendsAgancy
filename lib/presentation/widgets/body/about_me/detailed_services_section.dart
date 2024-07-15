@@ -1,11 +1,9 @@
-// ignore_for_file: unused_import
-
 import 'package:flutter/material.dart';
-import 'package:portfolio/generated/l10n.dart';
+import 'package:portfolio/presentation/widgets/app_bar/developer_name_btn.dart';
 import 'package:portfolio/presentation/widgets/body/about_me/our_agents_item.dart';
 
-import '../../../../core/utils/app_strings.dart';
 import '../../../../core/utils/app_styles.dart';
+
 import 'detailed_services_grid.dart';
 
 class DetailedServicesSection extends StatelessWidget {
@@ -18,12 +16,14 @@ class DetailedServicesSection extends StatelessWidget {
       children: [
         FittedBox(
           child: Text(
-            S.of(context).servicesIOffer,
+            isArabic() ? "الخدمات التي نقدمها" : "The Services We Offer",
             style: AppStyles.s32,
           ),
         ),
-        const SizedBox(height: 10),
-        OurAgentsItem()
+        const SizedBox(height: 32),
+        const DetailedServicesGrid(),
+        const SizedBox(height: 32),
+        OurAgentsItem(),
       ],
     );
   }

@@ -32,7 +32,7 @@ class AboutMeSection extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 8),
-          const ExperienceInfo(),
+          // const ExperienceInfo(),
           const SizedBox(height: 50),
           Center(
               child: Image.network(

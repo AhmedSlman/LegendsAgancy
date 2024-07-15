@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart'; // Import the correct package
-import 'package:shimmer/shimmer.dart';
 
 import 'config/theme_manager.dart';
 import 'generated/l10n.dart';

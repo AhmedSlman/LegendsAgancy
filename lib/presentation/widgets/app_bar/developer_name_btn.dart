@@ -1,19 +1,18 @@
-// ignore_for_file: prefer_const_constructors, depend_on_referenced_packages
+// ignore_for_file: prefer_const_constructors, depend_on_referenced_packages, avoid_web_libraries_in_flutter
+
+import 'dart:html' as html;
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_phoenix/flutter_phoenix.dart';
-import 'package:portfolio/generated/l10n.dart';
+import 'package:intl/intl.dart';
 import 'package:universal_html/html.dart' as html;
-import 'dart:html' as html;
+
+import 'package:portfolio/generated/l10n.dart';
 
 import '../../../core/utils/app_enums.dart';
 import '../../../core/utils/app_extensions.dart';
 import '../../../core/utils/app_styles.dart';
-import 'package:intl/intl.dart';
-
 import '../../../local_cubit/locale_cubit.dart';
-import '../../views/home_view.dart';
 
 class DeveloperNameBtn extends StatelessWidget {
   const DeveloperNameBtn({super.key});
