@@ -23,7 +23,7 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "aboutMeMsg": MessageLookupByLibrary.simpleMessage(
-            "he Legends Agency team is renowned for our expertise in creating dynamic sports designs for a wide range of games. We understand the importance of delivering results promptly, which is why our highly skilled team is equipped to handle projects efficiently and with meticulous attention to detail. Our commitment to excellence ensures that our clients receive top-quality designs that exceed their expectations."),
+            "The Legends Agency team is renowned for our expertise in creating dynamic sports designs for a wide range of games. We understand the importance of delivering results promptly, which is why our highly skilled team is equipped to handle projects efficiently and with meticulous attention to detail. Our commitment to excellence ensures that our clients receive top-quality designs that exceed their expectations."),
         "aboutUs": MessageLookupByLibrary.simpleMessage("About Us"),
         "contact": MessageLookupByLibrary.simpleMessage("Contact"),
         "contactMsg": MessageLookupByLibrary.simpleMessage(

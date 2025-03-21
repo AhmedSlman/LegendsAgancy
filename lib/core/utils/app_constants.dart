@@ -8,28 +8,23 @@ abstract class AppConstants {
   static const double appBarHeight = 80;
   static List<CustomService> services = [
     CustomService(
-      service: isArabic() ? "فيديو موشن" : 'Video Motion',
-      logo: AppAssets.motionGraphics,
+      service: isArabic() ? "إدارة المحتوي الرقمي " : 'DIGITAL MANAGEMENT',
+      logo: AppAssets.administrator,
       description: '',
     ),
     CustomService(
-      service: isArabic() ? "تصميم جرافيك" : 'Graphic Design',
-      logo: AppAssets.gallery,
+      service: isArabic() ? "الإنتاج" : 'PRODUCTION',
+      logo: AppAssets.settings,
       description: '',
     ),
     CustomService(
-      service: isArabic() ? "فيديو مونتاج" : 'Video Editing',
-      logo: AppAssets.videoEditor,
+      service: isArabic() ? "الاستراتيجيات الناجحة" : 'SUCCESSFUL STRATEGY',
+      logo: AppAssets.target,
       description: '',
     ),
     CustomService(
-      service: isArabic() ? "وسائل التواصل الاجتماعي" : 'Social Media',
-      logo: AppAssets.socialMedia,
-      description: '',
-    ),
-    CustomService(
-      service: isArabic() ? "تصميم فيديو" : 'Video Creating',
-      logo: AppAssets.videoCreating,
+      service: isArabic() ? "الخدمات الابداعية" : 'CREATIVE SERVICES',
+      logo: AppAssets.graphicDesign,
       description: '',
     ),
   ];
@@ -46,6 +41,14 @@ abstract class AppConstants {
     // ),
   ];
   static List<Project> projects = [
+    Project(
+      name: isArabic() ? "نادي أبها " : 'ABHA CLUB',
+      imageUrl: 'https://i.postimg.cc/2ymw1YKc/BE-cover.png',
+      description: isArabic()
+          ? "انغمس في قلب شغف وإثارة نادي أبها من خلال تصميماتنا الرائعة والتفاعلية على وسائل التواصل الاجتماعي."
+          : "Dive into the heart of Abha Club's passion and excitement through our captivating and interactive social media design.",
+      previewLink: 'https://www.behance.net/gallery/188735461/Abha-FC-Official-Identity',
+    ),
     Project(
       name: isArabic() ? "وسائل التواصل الاجتماعي - العمل الفني" : "SOCIAL MEDIA - ART WORK",
       imageUrl: 'https://i.postimg.cc/ZYXkKDrq/general.jpg',
@@ -72,12 +75,13 @@ abstract class AppConstants {
       previewLink: 'https://www.behance.net/gallery/152964583/PSG-FC-Unofficial-Identity',
     ),
     Project(
-      name: isArabic() ? "نادي أبها " : 'ABHA CLUB',
-      imageUrl: 'https://i.postimg.cc/2ymw1YKc/BE-cover.png',
+      name: isArabic() ? " نادي الوكره " : 'AL WAKRAH SC',
+      imageUrl:
+          'https://i.postimg.cc/dQr7FnH9/legendsagency7-1739820260-3570193567806802640-49858051289.jpg',
       description: isArabic()
-          ? "انغمس في قلب شغف وإثارة نادي أبها من خلال تصميماتنا الرائعة والتفاعلية على وسائل التواصل الاجتماعي."
-          : "Dive into the heart of Abha Club's passion and excitement through our captivating and interactive social media design.",
-      previewLink: 'https://www.behance.net/gallery/188735461/Abha-FC-Official-Identity',
+          ? "انغمس في قلب شغف وإثارة نادي الوكرة من خلال تصميمات وسائل التواصل الاجتماعي الرائعة والتفاعلية لدينا."
+          : "Dive into the heart of Al Wakrah's passion and excitement through our captivating and interactive social media design.",
+      previewLink: 'https://www.behance.net/gallery/209693525/Al-Wakrah-SC-Official-Identity',
     ),
   ];
 }

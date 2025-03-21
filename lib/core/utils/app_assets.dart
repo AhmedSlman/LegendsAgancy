@@ -12,9 +12,8 @@ abstract class AppAssets {
   static const androidLogo00 = '$_basePath/android.svg';
   static const scrappingLogo00 = '$_basePath/slider.svg';
   static const uiDesignLogo00 = '$_basePath/ruler.svg';
-  static const gallery = '$_basePath/gallery.png';
-  static const motionGraphics = '$_basePath/motion-graphics.png';
-  static const socialMedia = '$_basePath/social-media.png';
-  static const videoEditor = '$_basePath/video-editor.png';
-  static const videoCreating = '$_basePath/video-editing.png';
+  static const administrator = 'assets/images/administration.png';
+  static const graphicDesign = 'assets/images/graphic-design.png';
+  static const settings = 'assets/images/setting.png';
+  static const target = 'assets/images/target.png';
 }

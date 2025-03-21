@@ -1,18 +1,73 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first, unused_import, must_be_immutable, non_constant_identifier_names, prefer_const_constructors, implementation_imports, unnecessary_import
-import 'package:carousel_slider/carousel_slider.dart';
+import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:portfolio/core/utils/app_colors.dart';
-import 'package:portfolio/core/utils/app_constants.dart';
 import 'package:portfolio/core/utils/app_styles.dart';
 import 'package:portfolio/core/widgets/custom_button.dart';
 import 'package:portfolio/generated/l10n.dart';
 import 'package:portfolio/presentation/widgets/app_bar/developer_name_btn.dart';
 
-class OurAgentsItem extends StatelessWidget {
-  CarouselController buttonCarouselController = CarouselController();
-  OurAgentsItem({super.key});
+class OurAgentsItem extends StatefulWidget {
+  const OurAgentsItem({super.key});
+
+  @override
+  _OurAgentsItemState createState() => _OurAgentsItemState();
+}
+
+class _OurAgentsItemState extends State<OurAgentsItem> {
+  final PageController _pageController = PageController(viewportFraction: 0.8);
+  int _currentPage = 0;
+  late Timer _timer;
+
+  final List<AgentColumn> agents = [
+    AgentColumn(
+      AgentName: isArabic() ? "نادي المرخية" : 'AL MARKHIYA CLUB',
+      AgnetImagePath: 'https://i.postimg.cc/FF2g9KhX/svg.png',
+    ),
+    AgentColumn(
+      AgentName: isArabic() ? "نادي أبها" : 'ABHA CLUB',
+      AgnetImagePath: 'https://i.postimg.cc/fbr1CvNv/image.png',
+    ),
+    AgentColumn(
+      AgentName: isArabic() ? "نادي الوكرة" : 'AL WAKRAH SC',
+      AgnetImagePath: 'https://i.postimg.cc/mgT71gw5/svg.png',
+    ),
+    AgentColumn(
+      AgentName: isArabic() ? "نادي الطائي" : 'AL TAI CLUB',
+      AgnetImagePath: 'https://i.postimg.cc/fW63nYTN/2023-svg.png',
+    ),
+    AgentColumn(
+      AgentName: isArabic() ? "O15 ACADEMY" : 'O15 ACADEMY',
+      AgnetImagePath: 'https://i.postimg.cc/hG5D8qXB/O15-ACADEMY.png',
+    ),
+  ];
+
+  @override
+  void initState() {
+    super.initState();
+    _startAutoScroll();
+  }
+
+  void _startAutoScroll() {
+    _timer = Timer.periodic(const Duration(seconds: 3), (timer) {
+      if (_currentPage < agents.length - 1) {
+        _currentPage++;
+      } else {
+        _currentPage = 0;
+      }
+      _pageController.animateToPage(
+        _currentPage,
+        duration: const Duration(milliseconds: 800),
+        curve: Curves.fastOutSlowIn,
+      );
+    });
+  }
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    _timer.cancel();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -25,38 +80,17 @@ class OurAgentsItem extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 10),
-        CarouselSlider(
-          items: [
-            AgentColumn(
-              AgentName: isArabic() ? "نادي المرخية" : 'AL MARKHIYA CLUB',
-              AgnetImagePath: 'https://i.postimg.cc/FF2g9KhX/svg.png',
-            ),
-            AgentColumn(
-              AgentName: isArabic() ? "نادي أبها" : 'ABHA CLUB',
-              AgnetImagePath: 'https://i.postimg.cc/fbr1CvNv/image.png',
-            ),
-            AgentColumn(
-              AgentName: isArabic() ? "نادي الوكرة" : 'AL WAKRAH SC',
-              AgnetImagePath: 'https://i.postimg.cc/mgT71gw5/svg.png',
-            ),
-          ],
-          carouselController: buttonCarouselController,
-          options: CarouselOptions(
-            height: 340,
-            aspectRatio: 16 / 9,
-            viewportFraction: 0.8,
-            initialPage: 0,
-            enableInfiniteScroll: true,
-            reverse: true,
-            autoPlay: true,
-            autoPlayInterval: Duration(seconds: 3),
-            autoPlayAnimationDuration: Duration(milliseconds: 800),
-            autoPlayCurve: Curves.fastOutSlowIn,
-            enlargeCenterPage: true,
-            enlargeFactor: 0.3,
-            scrollDirection: Axis.horizontal,
+        SizedBox(
+          height: 340,
+          child: PageView.builder(
+            controller: _pageController,
+            itemCount: agents.length,
+            itemBuilder: (context, index) {
+              return agents[index];
+            },
           ),
         ),
+        const SizedBox(height: 10),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -65,8 +99,18 @@ class OurAgentsItem extends StatelessWidget {
               width: 100,
               label: isArabic() ? "التالي" : "Next",
               backgroundColor: AppColors.primaryColor,
-              onPressed: () => buttonCarouselController.nextPage(
-                  duration: Duration(milliseconds: 300), curve: Curves.linear),
+              onPressed: () {
+                if (_currentPage < agents.length - 1) {
+                  _currentPage++;
+                } else {
+                  _currentPage = 0;
+                }
+                _pageController.animateToPage(
+                  _currentPage,
+                  duration: const Duration(milliseconds: 300),
+                  curve: Curves.linear,
+                );
+              },
             ),
           ],
         ),
@@ -97,7 +141,7 @@ class AgentColumn extends StatelessWidget {
         Text(
           AgentName,
           style: AppStyles.s24.copyWith(color: Colors.white),
-        )
+        ),
       ],
     );
   }

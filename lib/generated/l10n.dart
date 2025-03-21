@@ -80,10 +80,10 @@ class S {
     );
   }
 
-  /// `he Legends Agency team is renowned for our expertise in creating dynamic sports designs for a wide range of games. We understand the importance of delivering results promptly, which is why our highly skilled team is equipped to handle projects efficiently and with meticulous attention to detail. Our commitment to excellence ensures that our clients receive top-quality designs that exceed their expectations.`
+  /// `The Legends Agency team is renowned for our expertise in creating dynamic sports designs for a wide range of games. We understand the importance of delivering results promptly, which is why our highly skilled team is equipped to handle projects efficiently and with meticulous attention to detail. Our commitment to excellence ensures that our clients receive top-quality designs that exceed their expectations.`
   String get aboutMeMsg {
     return Intl.message(
-      'he Legends Agency team is renowned for our expertise in creating dynamic sports designs for a wide range of games. We understand the importance of delivering results promptly, which is why our highly skilled team is equipped to handle projects efficiently and with meticulous attention to detail. Our commitment to excellence ensures that our clients receive top-quality designs that exceed their expectations.',
+      'The Legends Agency team is renowned for our expertise in creating dynamic sports designs for a wide range of games. We understand the importance of delivering results promptly, which is why our highly skilled team is equipped to handle projects efficiently and with meticulous attention to detail. Our commitment to excellence ensures that our clients receive top-quality designs that exceed their expectations.',
       name: 'aboutMeMsg',
       desc: '',
       args: [],
