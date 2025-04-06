@@ -42,6 +42,15 @@ abstract class AppConstants {
   ];
   static List<Project> projects = [
     Project(
+      name: isArabic() ? " نادي الوكره " : 'AL WAKRAH SC',
+      imageUrl:
+          'https://i.postimg.cc/dQr7FnH9/legendsagency7-1739820260-3570193567806802640-49858051289.jpg',
+      description: isArabic()
+          ? "انغمس في قلب شغف وإثارة نادي الوكرة من خلال تصميمات وسائل التواصل الاجتماعي الرائعة والتفاعلية لدينا."
+          : "Dive into the heart of Al Wakrah's passion and excitement through our captivating and interactive social media design.",
+      previewLink: 'https://www.behance.net/gallery/209693525/Al-Wakrah-SC-Official-Identity',
+    ),
+    Project(
       name: isArabic() ? "نادي أبها " : 'ABHA CLUB',
       imageUrl: 'https://i.postimg.cc/2ymw1YKc/BE-cover.png',
       description: isArabic()
@@ -73,15 +82,6 @@ abstract class AppConstants {
           ? "انغمس في قلب شغف باريس سان جيرمان من خلال تصميمات وسائل التواصل الاجتماعي الرائعة والتفاعلية لدينا."
           : "Dive into the heart of PSG's passion and excitement through our captivating and interactive social media design.",
       previewLink: 'https://www.behance.net/gallery/152964583/PSG-FC-Unofficial-Identity',
-    ),
-    Project(
-      name: isArabic() ? " نادي الوكره " : 'AL WAKRAH SC',
-      imageUrl:
-          'https://i.postimg.cc/dQr7FnH9/legendsagency7-1739820260-3570193567806802640-49858051289.jpg',
-      description: isArabic()
-          ? "انغمس في قلب شغف وإثارة نادي الوكرة من خلال تصميمات وسائل التواصل الاجتماعي الرائعة والتفاعلية لدينا."
-          : "Dive into the heart of Al Wakrah's passion and excitement through our captivating and interactive social media design.",
-      previewLink: 'https://www.behance.net/gallery/209693525/Al-Wakrah-SC-Official-Identity',
     ),
   ];
 }

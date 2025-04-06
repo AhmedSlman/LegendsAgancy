@@ -23,7 +23,7 @@ class DetailedServicesSection extends StatelessWidget {
         const SizedBox(height: 32),
         const DetailedServicesGrid(),
         const SizedBox(height: 32),
-        OurAgentsItem(),
+        const OurAgentsItem(),
       ],
     );
   }
