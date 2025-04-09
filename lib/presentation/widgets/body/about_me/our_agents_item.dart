@@ -39,6 +39,14 @@ class _OurAgentsItemState extends State<OurAgentsItem> {
       AgentName: isArabic() ? "O15 ACADEMY" : 'O15 ACADEMY',
       AgnetImagePath: 'https://i.postimg.cc/hG5D8qXB/O15-ACADEMY.png',
     ),
+    AgentColumn(
+      AgentName: isArabic() ? "OS ACADEMY" : 'OS ACADEMY',
+      AgnetImagePath: 'https://i.postimg.cc/yx09FMLx/os-02.png',
+    ),
+    AgentColumn(
+      AgentName: isArabic() ? 'الاتحاد المصري لكرة السله' : "EBF ",
+      AgnetImagePath: 'https://i.postimg.cc/7L1VkT3b/EBF-Logo-01-1.png',
+    ),
   ];
 
   @override
